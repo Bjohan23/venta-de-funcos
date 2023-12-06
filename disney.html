@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="botones.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">
+        <img
+          src="img/logo de la empresa.png"
+          width="150px"
+          alt="Logo de FUNKOS"
+        />
+      </a>
+      <input
+        id="checkbox"
+        type="checkbox"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      />
+      <label class="toggle" for="checkbox">
+        <div id="bar1" class="bars"></div>
+        <div id="bar2" class="bars"></div>
+        <div id="bar3" class="bars"></div>
+      </label>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" id="blanco" href="index.html">INICIO </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="blanco" href="marvel.html">MARVEL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="blanco" href="starwars.html">STAR WARS </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="color: rgb(255, 0, 0)"
+              id="blanco"
+              href="disney.html"
+              >DISNEY
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="blanco" href="dc.html">DC</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="blanco" href="nosotros.html">NOSOTROS</a>
+          </li>
+        </ul>
+
+        <div class="my-2 my-lg-0">
+          <ul>
+            <li class="submenu">
+              <img id="img-carrito" src="img/car.svg" alt="car" />
+              <div id="carrito">
+                <table id="lista-carrito">
+                  <thead>
+                    <tr>
+                      <th>Imagen</th>
+                      <th>Nombre</th>
+                      <th>Precio</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+                <p>Total <span id="total">S/0.00</span></p>
+                <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
+                <a href="#" id="Imprimir" class="btn-3">Comprar</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="my-2 my-lg-0">
+          <a
+            href="iniciarSesion.html"
+            class="nav-link text-info"
+            id="iniciar"
+            onclick="entrar();"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-person-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+              />
+            </svg>
+
+            Iniciar sesión
+          </a>
+
+          <!-- se mostra cuando el usuario inicia sesion -->
+          <a class="Btn" href="index.html" id="salir">
+            <div class="sign" id="salir" onclick="salir()">
+              <svg viewBox="0 0 512 512">
+                <path
+                  d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+                ></path>
+              </svg>
+            </div>
+            <div class="text">Salir</div>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="header-content container">
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/BANNER 03.png" class="d-block w-100" alt="..." />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="products container">
+      <br />
+      <h2>Productos</h2>
+      <div class="box-container" id="lista-1">
+        <!--1-->
+        <div class="box">
+          <img src="img/IMG DISNEY 01.jpeg" alt="" />
+          <div class="product-txt">
+            <h3>Funko Pop Disney: Classics - Chip</h3>
+            <p>Figura Funko Pop de Chip de la serie Disney Classics.</p>
+            <p class="precio">S/ 69.90</p>
+            <br />
+            <a href="#" class="agregar-carrito btn-3" data-id="5">
+              Agregar al carrito
+            </a>
+          </div>
+        </div>
+        <!--2-->
+        <div class="box">
+          <img src="img/IMG DISNEY 03.jpeg" alt="" />
+          <div class="product-txt">
+            <h3>Funko Pop Disney: Villaina - Malefica</h3>
+            <p>Figura Funko Pop de Maléfica de la serie Villanos de Disney.</p>
+            <p class="precio">S/ 69.90</p>
+            <br />
+            <a href="#" class="agregar-carrito btn-3" data-id="2">
+              Agregar al carrito
+            </a>
+          </div>
+        </div>
+        <!--3-->
+        <div class="box">
+          <img src="img/IMG DISNEY 06.jpg" alt="" />
+          <div class="product-txt">
+            <h3>Funko Pop Disney 100 - Elsa</h3>
+            <p>Figura Funko Pop de Elsa de la serie 100 años de Disney.</p>
+            <p class="precio">S/ 69.90</p>
+            <br />
+            <a href="#" class="agregar-carrito btn-3" data-id="4">
+              Agregar al carrito
+            </a>
+          </div>
+        </div>
+        <!--4-->
+
+        <div class="box">
+          <img src="img/IMG DISNEY 04.jpg" alt="" />
+          <div class="product-txt">
+            <h3>Funko Pop Disney - Mickey Mouse</h3>
+            <p>Figura Funko Pop de Mickey Mouse, de Disney Classics.</p>
+            <p class="precio">S/ 69.90</p>
+            <br />
+            <a href="#" class="agregar-carrito btn-3" data-id="6">
+              Agregar al carrito
+            </a>
+          </div>
+        </div>
+        <!--5-->
+        <div class="box">
+          <img src="img/IMG DISNEY 05.jpg" alt="" />
+          <div class="product-txt">
+            <h3>Funko Pop Disney: Lilo & Stitch - Stitch w/ ukelele</h3>
+            <p>
+              Figura Funko Pop de Stitch con ukelele, de la película Lilo &
+              Stitch.
+            </p>
+            <p class="precio">S/ 65.90</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="1">
+              Agregar al carrito
+            </a>
+          </div>
+        </div>
+        <!--6-->
+        <div class="box">
+          <img src="img/IMG DISNEY 02.jpeg" alt="" />
+          <div class="product-txt">
+            <h3>Funko Pop Disney 100 - Cinderella</h3>
+            <p>
+              Figura Funko Pop de Cenicienta de la serie 100 años de Disney.
+            </p>
+            <p class="precio">S/ 69.90</p>
+            <br />
+            <a href="#" class="agregar-carrito btn-3" data-id="12">
+              Agregar al carrito
+            </a>
+          </div>
+        </div>
+        <!--7-->
+        <div class="box">
+          <img src="img/IMG DISNEY 09.png" alt="" />
+          <div class="product-txt">
+            <h3>Funko Pop Disney: Villains - Evil Queen</h3>
+            <p>
+              Figura Funko Pop de la Reina Malvada de la serie Villanos de
+              Disney.
+            </p>
+            <p class="precio">S/ 69.90</p>
+            <br />
+            <a href="#" class="agregar-carrito btn-3" data-id="9">
+              Agregar al carrito
+            </a>
+          </div>
+        </div>
+
+        <!--8-->
+        <div class="box">
+          <img src="img/IMG DISNEY 08.jpg" alt="" />
+          <div class="product-txt">
+            <h3>Funko Pop: Disney Encanto - Bruno Madrigal</h3>
+            <p>
+              Figura Funko Pop de Bruno Madrigal de la película de Disney
+              Encanto.
+            </p>
+            <p class="precio">S/ 69.90</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="8">
+              Agregar al carrito
+            </a>
+          </div>
+        </div>
+        <!--9-->
+        <div class="box">
+          <img src="img/IMG DISNEY 07.jpg" alt="" />
+          <div class="product-txt">
+            <h3>Funko Pop Disney 100 - Aurora</h3>
+            <p>Figura Funko Pop de Aurora de la serie 100 años de Disney.</p>
+            <p class="precio">S/ 69.90</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="7">
+              Agregar al carrito
+            </a>
+          </div>
+        </div>
+
+        <!--10-->
+        <div class="box">
+          <img src="img/IMG DISNEY 10.jpg" alt="" />
+          <div class="product-txt">
+            <h3>Funko Pop Disney: Classics - Goofy</h3>
+            <p>Figura Funko Pop de Goofy de la serie Disney Classics.</p>
+            <p class="precio">S/ 69.90</p>
+            <br />
+            <a href="#" class="agregar-carrito btn-3" data-id="10">
+              Agregar al carrito
+            </a>
+          </div>
+        </div>
+        <!--11-->
+        <div class="box">
+          <img src="img/IMG DISNEY 11.jpg" alt="" />
+          <div class="product-txt">
+            <h3>Funko Pop Disney: Classics - Dale</h3>
+            <p>Figura Funko Pop de Dale de la serie Disney Classics.</p>
+            <p class="precio">S/ 69.90</p>
+            <br />
+            <a href="#" class="agregar-carrito btn-3" data-id="11">
+              Agregar al carrito
+            </a>
+          </div>
+        </div>
+
+        <!--12-->
+        <div class="box">
+          <img src="img/IMG DISNEY 12.jpg" alt="" />
+          <div class="product-txt">
+            <h3>Funko Pop Disney 100 - Tiana</h3>
+            <p>Figura Funko Pop de Tiana de la serie 100 años de Disney</p>
+            <p class="precio">S/ 69.90</p>
+            <br />
+            <a href="#" class="agregar-carrito btn-3" data-id="12">
+              Agregar al carrito
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-2" id="load-more">Cargar más</div>
+    </main>
+
+    <section class="testimonio container">
+      <span>Testimoniales</span>
+      <h2>Que opinan nuestros clientes</h2>
+      <div class="testimonial-content">
+        <div class="testimonial-1">
+          <p>
+            "Comprar Funko Pops de Disney ha sido una experiencia increíble.
+            Cada figura captura la esencia y la personalidad de los personajes
+            de Disney de una manera única. Desde los clásicos hasta los
+            personajes más recientes, la variedad es asombrosa. Mi colección ha
+            crecido rápidamente.
+          </p>
+          <img src="img/starts.png" alt="" />
+          <h4>Calificación</h4>
+        </div>
+
+        <div class="testimonial-1">
+          <p>
+            "Siempre he sido un gran fanático de Disney, y cuando descubrí la
+            colección de Funko Pops inspirada en mis personajes favoritos, no
+            pude resistirme. La calidad y los detalles de cada figura son
+            impresionantes. Mi estantería ahora está llena de estos adorables
+            coleccionables.
+          </p>
+          <img src="img/starts.png" alt="" />
+          <h4>Calificación</h4>
+        </div>
+      </div>
+    </section>
+
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+        <div class="box1">
+          <figure>
+            <a href="#">
+              <img
+                src="img/logo de la empresa.png"
+                alt="Logo de FANTASYFUNKO"
+              />
+            </a>
+          </figure>
+        </div>
+        <div class="box1">
+          <h2>SOBRE NOSOTROS</h2>
+          <p>
+            Somos FUNKOS, una apasionada empresa dedicada a proporcionar a
+            nuestros clientes la mejor experiencia de compra de figuras Funko
+            Pop. Nos enorgullece ser el destino preferido para los
+            coleccionistas y amantes de la cultura pop.
+          </p>
+        </div>
+        <div class="box1">
+          <h2>SIGUENOS</h2>
+          <div class="red-social">
+            <a
+              href="https://www.facebook.com/phantom.oficial/"
+              class="fa fa-facebook"
+              target="_blank"
+            ></a>
+            <a
+              href="https://www.instagram.com/phantomoficial/"
+              class="fa fa-instagram"
+              target="_blank"
+            ></a>
+            <a
+              href="https://twitter.com/phantomperu "
+              class="fa fa-twitter"
+              target="_blank"
+            ></a>
+            <a
+              href="https://www.youtube.com/watch?v=RCnxTwMZLes"
+              class="fa fa-youtube"
+              target="_blank"
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="grupo-2">
+        <small
+          >&copy; 2023 <b>FUNKOFANTASY</b> - Todos los Derechos
+          Reservados.</small
+        >
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="funciones.js"></script>
+  </body>
+</html>

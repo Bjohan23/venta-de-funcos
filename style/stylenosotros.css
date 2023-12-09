@@ -15,64 +15,6 @@ img {
   max-width: 100%;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.header {
-  background-color: black;
-  display: flex;
-  justify-content: space-between; /* Alinea los elementos en el contenedor */
-  align-items: center; /* Centra los elementos verticalmente */
-  padding: 80px 0 0 0;
-  color: white;
-}
-
-.menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: flex;
-  align-items: center;
-  justify-content: space-between;
-  display: flex; /* Usa flexbox para el menú también */
-  align-items: center; /* Centra los elementos verticalmente en el menú */
-}
-
-.logo {
-  font-size: 35px;
-  color: rgb(255, 255, 255);
-  text-transform: uppercase;
-  font-weight: 300;
-  text-decoration: none;
-  width: 200px;
-}
-
-.menu .navbar ul li {
-  position: relative;
-  float: left;
-}
-
-.menu .navbar ul li a {
-  font-size: 18px;
-  padding: 15px;
-  color: rgb(255, 250, 250);
-  display: block;
-  text-decoration: none;
-}
-
-.menu .navbar ul li a:hover {
-  color: rgb(207, 76, 76);
-}
-
-#menu {
-  display: none;
-}
-
-.menu-icono {
-  width: 30px;
-}
 
 .menu label {
   cursor: pointer;
@@ -268,6 +210,7 @@ span {
 }
 
 /*slider*/
+
 .slider {
   position: relative;
   width: 200px;
@@ -310,8 +253,8 @@ span {
 }
 
 .centrarslider {
-  display: flex; /* Utilizar flexbox para colocar las tarjetas en una fila */
-  justify-content: space-around; /* Espacio uniforme entre las tarjetas */
+  display: flex; 
+  justify-content: space-around; 
   flex-wrap: wrap;
 }
 
@@ -542,5 +485,45 @@ span {
   .textimonial-1 {
     padding: 25px;
     margin-bottom: 25px;
+  }
+}
+
+
+ /* Agrega estilos para el botón */
+
+ .boton-container {
+  text-align: left; 
+  margin-top: 20px; 
+  text-align: center;  
+}
+
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0d0e0d; /* Color de fondo */
+  color: rgb(231, 217, 217); /* Color del texto */
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 50px; 
+}
+
+.boton:hover {
+  background-color: #808680;
+}
+
+
+/* Estilos para pantallas más pequeñas */
+@media only screen and (max-width: 800px) {
+  .slider span {
+      width: calc(60% - 30px); /* Cambia el ancho de cada imagen en pantallas más pequeñas */
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .slider span {
+      width: calc(100% - 20px); /* Cambia el ancho de cada imagen en pantallas muy pequeñas */
   }
 }

@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAGINA DE FUNKOS</title>
-    <link rel="stylesheet" href="stylenosotros.css">
-    <link rel="stylesheet" href="botones.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/stylenosotros.css">
+    <link rel="stylesheet" href="style/botones.css">
+    <link rel="stylesheet" href="style/style.css">
     <!--Iconos-->
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </head>
@@ -128,6 +128,7 @@
             </div>
     </section>
     <br>
+    <br>
     <div class="row">
         <!-- <img src="img/NOSOTROS.png" alt="Nosotros" class="img-fluid"> -->
     </div>
@@ -174,56 +175,66 @@
     </div>
     <br>
     <div class="row">
-        <img src="img nosotros/IMG SUB CONTACTOS.png" alt="Nosotros" class="img-fluid">
+        <img src="img nosotros/IMG CONTACTANOS.png" alt="Nosotros" class="img-fluid">
     </div>
     <!--FORMULARIO-->
-    <div class="contact-container">
-        <div class="for-container">
-            <h3>Mensaje</h3>
-            <form action="" class="contact-form">
-                <input type="text" placeholder="Nombre" required>
-                <input type="email" name="" id="" placeholder="Escribe tu email..." required>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Escribe un mensaje aquí..." ></textarea>
-                <input type="submit" value="Enviar" class="send-button">
-            </form>
-        </div>
-        <!--Mapa-->
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.4830449528082!2d-79.83333663051444!3d-6.778109067844363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904cef2c59a8af49%3A0x26b424ea1ed54f05!2sPhantom!5e0!3m2!1ses-419!2spe!4v1701229077877!5m2!1ses-419!2spe" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </div>
+   <!--FORMULARIO-->
+<div class="contact-container">
+  <div class="for-container">
+      <h3>DEJA TUS DATOS</h3>
+      <form id="myForm" class="contact-form">
+          <input type="text" id="nombre" placeholder="Nombre" required>
+          <input type="email" id="email" placeholder="Escribe tu email..." required>
+          <textarea id="mensaje" cols="30" rows="10" placeholder="Escribe un mensaje aquí..."></textarea>
+          <input type="button" value="Enviar" class="send-button" onclick="mostrarDatos()">
+      </form>
+  </div>
+  <!--Mapa-->
+  <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.4830449528082!2d-79.83333663051444!3d-6.778109067844363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904cef2c59a8af49%3A0x26b424ea1ed54f05!2sPhantom!5e0!3m2!1ses-419!2spe!4v1701229077877!5m2!1ses-419!2spe" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+
     <br><br>
     <!--PIE DE PAGINA-->
+
     <footer class="pie-pagina">
-        <div class="grupo-1">
-            <div class="box1">
-                <figure>
-                    <a href="#">
-                        <img src="img/logo de la empresa.png" alt="Logo de FANTASYFUNKO">
-                    </a>
-                </figure>
-            </div>
-            <div class="box1">
-                <h2>SOBRE NOSOTROS</h2>
-                <p>Somos FUNKOS, una apasionada empresa dedicada a proporcionar a nuestros clientes la mejor experiencia
-                    de compra de figuras Funko Pop. Nos enorgullece ser el destino preferido para los coleccionistas y
-                    amantes de la cultura pop.</p>
-            </div>
-            <div class="box1">
-                <h2>SIGUENOS</h2>
-                <div class="red-social">
-                    <a href="https://www.facebook.com/phantom.oficial/" class="fa fa-facebook" target="_blank"></a>
-                    <a href="https://www.instagram.com/phantomoficial/" class="fa fa-instagram" target="_blank"></a>
-                    <a href="https://twitter.com/phantomperu " class="fa fa-twitter" target="_blank"></a>
-                    <a href="https://www.youtube.com/watch?v=RCnxTwMZLes" class="fa fa-youtube" target="_blank"></a>
-                </div>
-            </div>
+      <div class="grupo-1">
+        <div class="box1">
+          <figure>
+            <a href="#">
+              <img
+                src="img/logo de la empresa.png"
+                alt="Logo de FANTASYFUNKO"
+              />
+            </a>
+          </figure>
         </div>
-        <div class="grupo-2">
-            <small>&copy; 2023 <b>FUNKOFANTASY</b> - Todos los Derechos Reservados.</small>
+        <div class="box1">
+          <h2>SOBRE NOSOTROS</h2>
+          <p>
+            Somos FUNKO FANTASY, una apasionada empresa dedicada a proporcionar a
+            nuestros clientes la mejor experiencia de compra de figuras Funko
+            Pop. Nos enorgullece ser el destino preferido para los
+            coleccionistas y amantes de la cultura pop.
+          </p>
         </div>
+        <div class="box1">
+          <h2>SIGUENOS</h2>
+          <div class="red-social">
+            <a href="https://www.facebook.com/phantom.oficial/" class="fa fa-facebook" aria-label="Facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/phantomoficial/" class="fa fa-instagram" aria-label="Instagram" target="_blank"></a>
+            <a href="https://twitter.com/phantomperu" class="fa fa-twitter" aria-label="Twitter" target="_blank"></a>
+            <a href="https://www.youtube.com/watch?v=RCnxTwMZLes" class="fa fa-youtube" aria-label="YouTube" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+      <div class="grupo-2">
+        <small
+          >&copy; 2023 <strong>FUNKOFANTASY</strong> - Todos los Derechos Reservados.</small>
+      </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -256,7 +267,11 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous"
   /> 
-    <script src="funciones.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+
+<!--  SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/funciones.js"></script>
 
 
 </body>

@@ -1,6 +1,7 @@
 index
 ![image](https://github.com/Bjohan23/venta-de-funcos-/assets/83877227/bb2afa88-2cb8-499e-9993-68daac8b9bce)
-![image](https://github.com/Bjohan23/venta-de-funcos-/assets/83877227/c5a3a234-b38d-4a59-9b41-b80c05988681)
+![image](https://github.com/Bjohan23/venta-de-funcos-/assets/83877227/0453d8f4-4dc0-49d0-b6e6-30b706a90f35)
+
 ![image](https://github.com/Bjohan23/venta-de-funcos-/assets/83877227/a72ba614-1761-4c82-8bc0-af3aae4b2b2f)
 carrito de compras
 ![image](https://github.com/Bjohan23/venta-de-funcos-/assets/83877227/b5a83b7c-337a-407d-bd54-2afa9acaf7ec)

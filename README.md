@@ -12,4 +12,4 @@ pagina para pagar
 login 
 ![image](https://github.com/Bjohan23/venta-de-funcos-/assets/83877227/126b312c-c469-4cb8-b1f7-1b38a7c0ada2)
 
-![link](https://venta-de-funcos.vercel.app/index.html)
+https://venta-de-funcos.vercel.app/index.html

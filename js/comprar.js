@@ -64,6 +64,30 @@ function mostrarResumenCompra() {
     cartSummary.appendChild(mensaje);
   }
 }
+function mostrarAlertaCompraExitosa() {
+  Swal.fire({
+    icon: "success",
+    title: "¡Compra exitosa!",
+    text: "¿Desea seguir comprando?",
+    showCancelButton: true,
+    confirmButtonText: "Sí",
+    cancelButtonText: "No",
+  }).then((result) => {
+    if (result.value) {
+      window.location.href = "index.html";
+    }
+  });
+}
 
+function pagar() {
+  document.getElementById("mensaje").innerHTML = "Gracias por su compra";
+  document.getElementById("cart-summary").style.display = "none";
+  document.getElementById("btn").style.display = "none";
+
+  document.getElementById("tarjeta").style.display = "none";
+  document.getElementById("ocultar").style.display = "none";
+
+  mostrarAlertaCompraExitosa();
+}
 // Mostrar el resumen de compra al cargar la página
 mostrarResumenCompra();

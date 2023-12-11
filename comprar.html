@@ -130,12 +130,12 @@
 
     <div class="container mt-5">
       <h1 class="mb-4" style="text-align: center; font-family: Verdana">
-        Resumen de Compra
+        <p id="mensaje">Resumen de Compra</p>
       </h1>
 
       <div id="cart-summary"></div>
       <a href="../index.html" class="btn btn-primary">Seguir comprando</a>
-      <a href="#" onclick="mostrarTarjeta()" class="btn btn-success">
+      <a href="#" onclick="mostrarTarjeta()" id="btn" class="btn btn-success">
         Pagar con Tarjeta
       </a>
       <a
@@ -236,7 +236,7 @@
               </div>
             </div>
           </div>
-          <form class="form" autocomplete="off" >
+          <form class="form" autocomplete="off">
             <fieldset>
               <label for="card-number">Número de Tarjeta</label>
               <input
@@ -311,8 +311,10 @@
               <label for="card-ccv">CCV</label>
               <input type="text" id="card-ccv" maxlength="3" />
             </fieldset>
-            <button class="btn"><i class="fa fa-lock"></i> Pagar</button>
           </form>
+          <center>
+            <button class="btn btn-danger" onclick="pagar()">Pagar</button>
+          </center>
         </div>
       </div>
     </div>
@@ -320,6 +322,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <!-- Incluir SweetAlert2 mediante CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="js/comprar.js"></script>
     <script src="js/tarjeta.js"></script>

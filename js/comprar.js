@@ -1,4 +1,8 @@
 // Función para obtener parámetros de consulta de la URL
+/*
+obtiene los parámetros de consulta de la url  . utiliza la api de urlSearchParams.
+para analizar la cadena de consulta y devolver un objeto de parámetros de consulta.
+*/
 function getQueryParams() {
   const queryParams = new URLSearchParams(window.location.search);
   return Object.fromEntries(queryParams.entries());
@@ -89,5 +93,6 @@ function pagar() {
 
   mostrarAlertaCompraExitosa();
 }
+
 // Mostrar el resumen de compra al cargar la página
 mostrarResumenCompra();

@@ -1,3 +1,6 @@
+// implementa una funcionalidad de "cargar más" que muestra de a 4 elementos cada vez que se hace clic
+//en el botón "load-more". Cuando todos los elementos han sido mostrados, el botón se oculta.
+
 let loadMoreBtn = document.querySelector("#load-more");
 let currentItem = 8;
 
@@ -13,8 +16,8 @@ loadMoreBtn.onclick = () => {
 };
 
 //  codigo de carrito de compras
-let total = 0;
-const totalElement = document.getElementById("total");
+let total = 0; //Inicializo una variable
+const totalElement = document.getElementById("total"); //Referencia al elemento del DOM con el id "total", que se utilizará para mostrar el costo total
 const carrito = document.getElementById("carrito");
 const elementos1 = document.getElementById("lista-1");
 const lista = document.querySelector("#lista-carrito tbody");
@@ -26,14 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
   mostrarTotal();
 });
 
-cargarEventListeners();
+cargarEventListeners(); //se encarga de configurar los event listeners para las interacciones del usuario.
 
+//Lógica para manejar eventos de clic en elementos específicos de la interfaz de
+// usuario relacionados con un carrito de compras, como agregar elementos al carrito,eliminar elementos y vaciar
 function cargarEventListeners() {
   elementos1.addEventListener("click", comprarElemento);
   carrito.addEventListener("click", eliminarElemento);
   vaciarCarritoBtn.addEventListener("click", vaciarCarrito);
   document.getElementById("Imprimir").addEventListener("click", comprar);
 }
+
+//capturar el evento de clic en algún elemento de la interfaz de usuario que tenga la clase
+//"agregar-carrito", en este caso "Agregar al carrito".
 
 function comprarElemento(e) {
   e.preventDefault();
@@ -43,6 +51,7 @@ function comprarElemento(e) {
   }
 }
 
+//encapsula la lógica para extraer información específica de un producto
 function leerDatosElemento(elemento) {
   const infoElemento = {
     imagen: elemento.querySelector("img").src,
@@ -51,11 +60,14 @@ function leerDatosElemento(elemento) {
     id: elemento.querySelector("a").getAttribute("data-id"),
   };
 
+  //Llama a la función insertarCarrito y le pasa el objeto infoElemento como argumento.
   insertarCarrito(infoElemento);
 }
 
+// se encarga de tomar la información de un producto y la representa visualmente en una nueva fila
+// en la tabla, cada fila contiene la imagen, el título, el precio
 function insertarCarrito(elemento) {
-  const row = document.createElement("tr");
+  const row = document.createElement("tr"); //crea un nuevo elemento de tabla (<tr>) que representará una fila en el carrito.
   row.innerHTML = `
         <td>
             <img src="${elemento.imagen}" width="100" height="150">
@@ -81,6 +93,7 @@ function insertarCarrito(elemento) {
   mostrarTotal();
 }
 
+// se encarga de manejar la eliminación de un elemento del carrito de compras en la interfaz de usuario
 function eliminarElemento(e) {
   e.preventDefault();
   if (e.target.classList.contains("borrar")) {
@@ -97,11 +110,11 @@ function eliminarElemento(e) {
 
     // Guardar carrito en localStorage después de eliminar un elemento
     guardarCarritoEnLocalStorage();
-
     mostrarTotal();
   }
 }
 
+//Permite vaciar completamente el carrito de compras, restableciendo el total a cero
 function vaciarCarrito() {
   console.log("Vaciar carrito");
   while (lista.firstChild) {
@@ -118,6 +131,7 @@ function vaciarCarrito() {
   return false;
 }
 
+//Muestra el total de la compra
 function mostrarTotal() {
   // Mostrar el total en tu elemento HTML con el símbolo de soles
   totalElement.textContent = `S/${total.toFixed(2)}`;
@@ -202,7 +216,6 @@ function comprar() {
       precio: fila.querySelector("td:nth-child(3)").textContent,
       id: fila.querySelector("a").getAttribute("data-id"),
     };
-
     carritoArray.push(elemento);
   });
 

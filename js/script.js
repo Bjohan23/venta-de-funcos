@@ -160,23 +160,34 @@ function cargarCarritoDesdeLocalStorage() {
   }
 }
 
+//Parte del formulario
 function mostrarDatos() {
   // Captura de datos del formulario
   var nombre = document.getElementById("nombre").value;
   var email = document.getElementById("email").value;
   var mensaje = document.getElementById("mensaje").value;
 
-  // Crear el mensaje de la alerta
-  var mensajeAlerta =
-    "Nombre: " + nombre + "\nEmail: " + email + "\nMensaje: " + mensaje;
+  // Verificar si los campos están completos
+  if (nombre.trim() === "" || email.trim() === "" || mensaje.trim() === "") {
+    // Mostrar mensaje de error si algún campo está vacío
+    Swal.fire({
+      icon: "error",
+      title: "Error",
+      text: "Completa todos los campos antes de enviar el formulario.",
+    });
+  } else {
+    // Crear el mensaje de la alerta
+    var mensajeAlerta =
+      "Nombre: " + nombre + "\nEmail: " + email + "\nMensaje: " + mensaje;
 
-  // Mostrar ventana de alerta con la información del formulario
-  alert(mensajeAlerta);
+    // Mostrar ventana de alerta con la información del formulario
+    alert(mensajeAlerta);
 
-  // Limpiar los campos del formulario
-  document.getElementById("nombre").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("mensaje").value = "";
+    // Limpiar los campos del formulario
+    document.getElementById("nombre").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("mensaje").value = "";
+  }
 }
 
 function comprar() {
